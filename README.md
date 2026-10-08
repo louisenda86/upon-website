@@ -37,7 +37,11 @@ The film uses real UpOn screens, slower motion and crossfades, and an original c
 
 ## Hosting
 
-This is a static website. The entire deployable site lives in `dist/`. `vercel.json` selects that output directory for Vercel; `.openai/hosting.json` retains the earlier private Sites deployment.
+Production: [mejalismcorp.com](https://mejalismcorp.com). The `www` host permanently redirects to the apex domain. The Vercel fallback URL is [upon-website.vercel.app](https://upon-website.vercel.app).
+
+This is a static website. The entire deployable site lives in `dist/`. `vercel.json` selects that output directory for Vercel, and pushes to this repository's `main` branch deploy to the `upon-website` Vercel project. `.openai/hosting.json` retains the earlier private Sites deployment.
+
+The domain's authoritative DNS is managed at Squarespace. Only the web A and CNAME records were changed for Vercel; Google Workspace mail records and Squarespace nameservers were preserved. Before future DNS changes, check the exact targets shown in the Vercel project's domain settings rather than assuming an IP or CNAME is permanent. The domain registrant email must also be verified in Squarespace to avoid suspension.
 
 ## Verification
 
